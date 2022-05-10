@@ -121,3 +121,9 @@ dotsArray.forEach((dot) => {
     });
   });
 });
+
+setInterval(() => {
+  setTimeout(() => {
+    nextPhoto();
+  }, 3000);
+}, 3000);
