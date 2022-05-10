@@ -9,6 +9,7 @@ const firstDot = document.querySelector(".first-dot");
 const lastDot = document.querySelector(".last-dot");
 const dotsNodeList = document.querySelectorAll(".dot");
 const dotsArray = [...dotsNodeList];
+const slidesContainer = document.querySelector(".slides-container");
 
 function nextPhoto() {
   const visibleElement = document.getElementsByClassName("visible");
@@ -93,6 +94,30 @@ function previousPhoto() {
 
 dotsArray.forEach((dot) => {
   dot.addEventListener("click", (e) => {
-    console.log(dotsArray.indexOf(e.target));
+    // // TESTING IF DOTSARRAY.INDEXOF GETS ME THE RIGHT INDEX
+    // console.log(dotsArray.indexOf(e.target));
+
+    // // TESTING IF I CAN GET THE DATA-SLIDE NUMBER
+    // allSlidesArray.forEach((slide) => {
+    //   // slide.classList.remove("visible"); // removes "visible" class from all slides
+    //   console.log(slide.dataset.slide); // data-slide numbers of all 5 slides
+    // });
+
+    // removes "visible-dot" class from all dots
+    dotsArray.forEach((dot) => {
+      dot.classList.remove("visible-dot");
+    });
+    // adds "visible-dot" class to clicked dot
+    e.target.classList.add("visible-dot");
+
+    allSlidesArray.forEach((slide) => {
+      // removes "visible" class from all slides
+      slide.classList.remove("visible");
+      // adds "visible" class to slide with dataset-slide number that matches index of clicked dot
+      if (slide.dataset.slide === dotsArray.indexOf(e.target).toString()) {
+        console.log("hello");
+        slide.classList.add("visible");
+      }
+    });
   });
 });
