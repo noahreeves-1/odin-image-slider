@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Carousel</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="arrow-left" onclick="previousPhoto()">
+        <img src="./images/arrow-collapse-left.svg" alt="left arrow" />
+      </div>
+      <div class="slides-container">
+        <div class="slide first visible" data-slide="0">
+          <img
+            src="./images/kuala_lumpur.webp"
+            alt="kuala lumpur petronas towers"
+          />
+        </div>
+        <div class="slide" data-slide="1">
+          <img src="./images/penang.jpeg" alt="penang georgetown" />
+        </div>
+        <div class="slide" data-slide="2">
+          <img
+            src="./images/ho_chi_minh_city.jpeg"
+            alt="ho chi minh city street view"
+          />
+        </div>
+        <div class="slide" data-slide="3">
+          <img src="./images/sri_lanka.jpeg" alt="sri lanka sigiriya" />
+        </div>
+        <div class="slide last" data-slide="4">
+          <img src="./images/Kathmandu.jpeg" alt="kathmandu nepal" />
+        </div>
+        <div class="navigation-dots">
+          <ul class="dots">
+            <li class="dot first-dot visible-dot"><a href="#"></a></li>
+            <li class="dot"><a href="#"></a></li>
+            <li class="dot"><a href="#"></a></li>
+            <li class="dot"><a href="#"></a></li>
+            <li class="dot last-dot">
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="arrow-right" onclick="nextPhoto()">
+        <img src="./images/arrow-collapse-right.svg" alt="arrow right" />
+      </div>
+    </div>
+  </body>
+</html>
